@@ -13,9 +13,9 @@ function App() {
       <WelcomeMessage />
       <Header />
 
-      <UserProfile name="Eric Munyi" 
-      age="26" 
-      bio="Software developer passionate about React and JavaScript." />
+      <UserProfile name="Alice" 
+      age="25" 
+      bio="Loves hiking and photography" />
       <MainContent />
       <Footer />
     </div>
