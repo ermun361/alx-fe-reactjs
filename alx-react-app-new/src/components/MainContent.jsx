@@ -1,15 +1,7 @@
 function MainContent() {
-
-    const mainStyle = {
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '16px',
-        lineHeight: '1.5',
-        color: '#BBBBBB',
-        padding: '20px'
-    };
     return (
-        <main style={mainStyle}>
-            <p>I love to visit New York, Paris, and Tokyo.</p>
+        <main style={{ padding: '20px', backgroundColor: '#f0f0f0', minHeight: '400px', lineHeight: '1.6' }}>
+            <p>I love to visit New York, Tokyo, and Paris.</p>
         </main>
     );
 }

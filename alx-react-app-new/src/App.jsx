@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   return (
     <div style={{ 
-      backgroundColor: '#1a1a1a', // Dark background for the whole page
+      backgroundColor: '#1a1a1a',
       minHeight: '100vh', 
       fontFamily: 'system-ui, sans-serif' 
     }}>
