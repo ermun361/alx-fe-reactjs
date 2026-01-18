@@ -19,10 +19,12 @@ function Navbar() {
 }
 
 const linkStyle = {
-  color: 'white',
-  textDecoration: 'none',
-  fontSize: '18px',
-  fontWeight: 'bold'
+  display: 'flex',
+  justifyContent: 'space-between', 
+  alignItems: 'center',
+  padding: '20px 5%',          
+  backgroundColor: '#fff',
+  borderBottom: '1px solid #eee'
 };
 
 export default Navbar;

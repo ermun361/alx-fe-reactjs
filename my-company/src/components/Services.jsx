@@ -7,7 +7,7 @@ function Services() {
 
   return (
     <div style={{ padding: '40px', textAlign: 'center' }}>
-      <h1 style={{ color: '#2c3e50' }}>Our Services</h1>
+      <h1 style={{ color: '#f4f8fc' }}>Our Services</h1>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', marginTop: '20px' }}>
         {servicesList.map((service, index) => (
           <div key={index} style={{
