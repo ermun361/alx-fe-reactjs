@@ -1,4 +1,3 @@
-// src/components/Home.jsx
 function Home() {
   return (
     <div style={{ padding: '50px', textAlign: 'center', backgroundColor: '#f4f4f4', minHeight: '80vh' }}>
