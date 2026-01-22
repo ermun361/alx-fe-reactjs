@@ -1,23 +1,40 @@
-import { create } from 'zustand'; 
+import { create } from 'zustand';
 
 export const useRecipeStore = create((set) => ({
   recipes: [],
-  addRecipe: (newRecipe) => set((state) => ({ 
-    recipes: [...state.recipes, newRecipe] 
-  })),
+  searchTerm: '',
+  filteredRecipes: [],
 
-  // action to delete a recipe by id
-  deleteRecipe: (id) => set((state) => ({
-    recipes: state.recipes.filter(recipe => recipe.id !== id)
-  })),
+  // Set the search term
+  setSearchTerm: (term) => set({ searchTerm: term }),
 
-  // action to update an existing recipe by id
-  updateRecipe: (updatedRecipe) => set((state) => ({
-    recipes: state.recipes.map(recipe => 
-      recipe.id === updatedRecipe.id ? updatedRecipe : recipe
-    )
-  })),
+  // Filter recipes based on the search term
+  filterRecipes: () =>
+    set((state) => ({
+      filteredRecipes: state.recipes.filter((recipe) =>
+        recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
+      ),
+    })),
 
-  
-  setRecipes: (recipes) => set({ recipes }),
+  addRecipe: (newRecipe) =>
+    set((state) => {
+      const updatedRecipes = [...state.recipes, newRecipe];
+      return { recipes: updatedRecipes };
+    }),
+
+  deleteRecipe: (id) =>
+    set((state) => {
+      const updatedRecipes = state.recipes.filter((recipe) => recipe.id !== id);
+      return { recipes: updatedRecipes };
+    }),
+
+  updateRecipe: (updatedRecipe) =>
+    set((state) => {
+      const updatedRecipes = state.recipes.map((recipe) =>
+        recipe.id === updatedRecipe.id ? updatedRecipe : recipe
+      );
+      return { recipes: updatedRecipes };
+    }),
+
+  setRecipes: (recipes) => set({ recipes, filteredRecipes: recipes }),
 }));
