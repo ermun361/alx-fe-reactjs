@@ -112,3 +112,39 @@ h2 {
   color: #4a5568;
   line-height: 1.6;
 }
+
+/* Dashboard Layout: Two Column Grid */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px; /* Main content takes rest, sidebar is 350px */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Sidebar styling for Favorites and Recommendations */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+/* Mobile Responsiveness: Stack columns on small screens */
+@media (max-width: 850px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    position: static;
+  }
+}
+
+/* Optional: Subtle box styling for the lists */
+.main-content, .sidebar > div {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}

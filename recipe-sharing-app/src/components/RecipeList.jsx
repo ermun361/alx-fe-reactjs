@@ -1,34 +1,69 @@
 import { useRecipeStore } from './recipeStore';
-import { Link } from 'react-router-dom';
+import EditRecipeForm from './EditRecipeForm';
+import DeleteRecipeButton from './DeleteRecipeButton';
+import { useParams, Link } from 'react-router-dom';
 
-const RecipeList = () => {
-  // Get filteredRecipes and the current searchTerm from the store
-  const filteredRecipes = useRecipeStore((state) => state.filteredRecipes);
-  const recipes = useRecipeStore((state) => state.recipes);
-  const searchTerm = useRecipeStore((state) => state.searchTerm);
+const RecipeDetails = () => {
+  const { recipeId } = useParams();
+  
+  // Find the recipe from the store using the ID from the URL
+  const recipe = useRecipeStore(state =>
+    state.recipes.find(recipe => recipe.id === Number(recipeId))
+  );
 
-  // If search term is active, use filteredRecipes; otherwise use all recipes
-  const displayRecipes = searchTerm ? filteredRecipes : recipes;
+  // Favorite actions and state
+  const favorites = useRecipeStore(state => state.favorites);
+  const addFavorite = useRecipeStore(state => state.addFavorite);
+  const removeFavorite = useRecipeStore(state => state.removeFavorite);
+
+  if (!recipe) {
+    return <p>Recipe not found! <Link to="/">Go Back</Link></p>;
+  }
+
+  // Check if this specific recipe is already a favorite
+  const isFavorite = favorites.includes(recipe.id);
 
   return (
-    <div>
-      <h2>Recipe List</h2>
-      {displayRecipes.length === 0 ? (
-        <p>No recipes found.</p>
-      ) : (
-        displayRecipes.map((recipe) => (
-          <div key={recipe.id} className="recipe-item">
-            <h3>
-              <Link to={`/recipe/${recipe.id}`} style={{ textDecoration: 'none', color: '#3498db' }}>
-                {recipe.title}
-              </Link>
-            </h3>
-            <p>{recipe.description}</p>
-          </div>
-        ))
-      )}
+    <div style={{ padding: '20px', textAlign: 'left' }}>
+      <h1>{recipe.title}</h1>
+
+      {/* --- FAVORITE BUTTON --- */}
+      <button
+        onClick={() => isFavorite ? removeFavorite(recipe.id) : addFavorite(recipe.id)}
+        style={{
+          backgroundColor: isFavorite ? '#ffd700' : '#f0f0f0', // Gold if favorite
+          color: '#333',
+          padding: '10px 15px',
+          border: '1px solid #ccc',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          fontSize: '1rem',
+          marginBottom: '20px'
+        }}
+      >
+        {isFavorite ? '★ Favorited' : '☆ Add to Favorites'}
+      </button>
+
+      <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>{recipe.description}</p>
+      
+      <hr style={{ margin: '30px 0' }} />
+
+      <section>
+        <h3>Edit Recipe Details</h3>
+        <EditRecipeForm recipe={recipe} />
+      </section>
+
+      <div style={{ marginTop: '20px' }}>
+        <DeleteRecipeButton recipeId={recipe.id} />
+      </div>
+
+      <div style={{ marginTop: '30px' }}>
+        <Link to="/" style={{ color: '#3498db', textDecoration: 'none' }}>
+          ← Back to Recipe List
+        </Link>
+      </div>
     </div>
   );
 };
 
-export default RecipeList;
+export default RecipeDetails;

@@ -8,27 +8,32 @@ const AddRecipeForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!title || !description) return;
-    
+    if (!title.trim() || !description.trim()) return; // Don't save empty recipes
+
+    // Create the recipe object
     addRecipe({ id: Date.now(), title, description });
+
+    // Reset fields
     setTitle('');
     setDescription('');
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title"
+        placeholder="Recipe Title"
+        required
       />
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        placeholder="Description"
+        placeholder="Recipe Description"
+        required
       />
-      <button type="submit">Add Recipe</button>
+      <button type="submit">Save Recipe</button>
     </form>
   );
 };
