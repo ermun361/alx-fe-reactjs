@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const fetchAdvancedUserData = async (username, location, minRepos, page = 1) => {
+const fetchUserData = async (username, location, minRepos, page = 1) => {
     // Construct the query string according to GitHub's syntax
     let queryParts = [];
     if (username) queryParts.push(`${username}`);
@@ -18,4 +18,4 @@ const fetchAdvancedUserData = async (username, location, minRepos, page = 1) => 
     return response.data;
 };
 
-export default fetchAdvancedUserData;
+export default fetchUserData;
