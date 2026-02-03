@@ -1,16 +1,27 @@
-# React + Vite
+# Tailwind CSS React Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of the ALX Frontend ReactJS curriculum. It demonstrates the integration of **Tailwind CSS v4** into a **React** application built with **Vite**, focusing on utility-first styling, responsive design, and interactive UI elements.
 
-Currently, two official plugins are available:
+## 🚀 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The core of this project is a `UserProfile` component that showcases:
+- **Utility-First Styling**: Using Tailwind classes instead of traditional CSS.
+- **Responsive Design**: Adaptive layouts for mobile (`sm:`) and desktop (`md:`) views.
+- **Interactivity**: Smooth transitions, hover effects, and transform animations.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **React**: Library for building user interfaces.
+- **Vite**: Ultra-fast frontend build tool.
+- **Tailwind CSS v4**: A utility-first CSS framework for rapid UI development.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+```text
+tailwind-react-integration/
+├── src/
+│   ├── components/
+│   │   └── UserProfile.jsx   # Styled profile card component
+│   ├── App.jsx               # Main application entry
+│   ├── index.css             # Tailwind directives
+│   └── main.jsx              # React DOM rendering
+├── vite.config.js            # Vite & Tailwind configuration
+└── package.json              # Project dependencies
