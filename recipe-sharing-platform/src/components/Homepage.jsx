@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import recipeData  from '../data.json';
 
-const Homepage = () => {
+const HomePage = () => {
     const [recipes, setRecipes] = useState([]);
 
 
@@ -37,7 +37,7 @@ const Homepage = () => {
                                 href={`/recipe/${recipe.id}`}
                                 className="inline-block mt-4 text-orange-500 font-medium hover:underline"
                             >
-                                View Recipe
+                                View recipe
                             </a>
                         </div>
                     </div>
@@ -48,4 +48,4 @@ const Homepage = () => {
     );
 };
 
-export default Homepage;
+export default HomePage;
