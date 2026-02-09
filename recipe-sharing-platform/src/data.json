@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=500"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=500"
+  },
+  {
+    "id": 3,
+    "title": "Classic Cheeseburger",
+    "summary": "A juicy beef patty topped with melted cheese, fresh lettuce, and tomato on a toasted bun.",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500"
+  },
+  {
+    "id": 4,
+    "title": "Avocado Toast",
+    "summary": "Creamy mashed avocado on toasted sourdough bread with chili flakes and a drizzle of olive oil.",
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=500"
+  },
+  {
+    "id": 5,
+    "title": "Greek Salad",
+    "summary": "A refreshing salad of cucumbers, tomatoes, red onions, olives, and feta cheese.",
+    "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=500"
+  }
+
+]
