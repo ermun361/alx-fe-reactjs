@@ -3,31 +3,102 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "ingredients": [
+      "200g spaghetti",
+      "100g guanciale or pancetta",
+      "2 large eggs",
+      "50g Pecorino Romano cheese",
+      "Freshly ground black pepper"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to a boil and cook spaghetti until al dente.",
+      "While pasta cooks, fry the pancetta in a pan until crispy.",
+      "In a small bowl, whisk the eggs and grated cheese together.",
+      "Drain the pasta, reserving a little pasta water.",
+      "Toss the pasta with the pancetta, then remove from heat and quickly stir in the egg mixture to create a creamy sauce."
+    ],
     "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=500"
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "ingredients": [
+      "500g chicken breast",
+      "1 cup plain yogurt",
+      "2 tbsp garam masala",
+      "400ml tomato puree",
+      "100ml heavy cream",
+      "Ginger and garlic paste"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and spices for at least 30 minutes.",
+      "Grill or pan-sear the chicken until cooked through and slightly charred.",
+      "In a separate pot, simmer tomato puree with ginger, garlic, and spices.",
+      "Add the chicken to the sauce and stir in the heavy cream.",
+      "Garnish with fresh cilantro and serve with naan or rice."
+    ],
     "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=500"
   },
   {
     "id": 3,
     "title": "Classic Cheeseburger",
     "summary": "A juicy beef patty topped with melted cheese, fresh lettuce, and tomato on a toasted bun.",
+    "ingredients": [
+      "Ground beef patty",
+      "Hamburger buns",
+      "Cheddar cheese slices",
+      "Lettuce, tomato, and onion",
+      "Ketchup and mustard"
+    ],
+    "instructions": [
+      "Season the beef patty with salt and pepper.",
+      "Grill or pan-fry the patty to your desired level of doneness.",
+      "Place a cheese slice on the patty during the last minute of cooking to melt.",
+      "Toast the buns slightly.",
+      "Assemble the burger with the patty, lettuce, tomato, onion, and condiments."
+    ],
     "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500"
   },
   {
     "id": 4,
     "title": "Avocado Toast",
     "summary": "Creamy mashed avocado on toasted sourdough bread with chili flakes and a drizzle of olive oil.",
+    "ingredients": [
+      "2 slices of sourdough bread",
+      "1 ripe avocado",
+      "1 tsp lemon juice",
+      "Red pepper flakes",
+      "Extra virgin olive oil"
+    ],
+    "instructions": [
+      "Toast the bread slices until golden brown.",
+      "In a small bowl, mash the avocado with lemon juice and a pinch of salt.",
+      "Spread the avocado mixture generously over the toast.",
+      "Sprinkle with red pepper flakes.",
+      "Drizzle with a little olive oil before serving."
+    ],
     "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=500"
   },
   {
     "id": 5,
     "title": "Greek Salad",
     "summary": "A refreshing salad of cucumbers, tomatoes, red onions, olives, and feta cheese.",
+    "ingredients": [
+      "2 large tomatoes",
+      "1 cucumber",
+      "1/2 red onion",
+      "100g feta cheese",
+      "Kalamata olives",
+      "Dried oregano and olive oil"
+    ],
+    "instructions": [
+      "Chop the tomatoes and cucumber into bite-sized chunks.",
+      "Thinly slice the red onion.",
+      "Combine vegetables and olives in a large bowl.",
+      "Top with a large block of feta cheese or crumbled feta.",
+      "Drizzle with olive oil and sprinkle with dried oregano."
+    ],
     "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=500"
   }
-
 ]
