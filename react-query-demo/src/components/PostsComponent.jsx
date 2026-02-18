@@ -3,7 +3,8 @@ import { useQuery } from 'react-query';
 
 // Function to fetch posts from the API
 const fetchPosts = async () => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const response = await 
+  fetch('https://jsonplaceholder.typicode.com/posts');
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
@@ -12,23 +13,27 @@ const fetchPosts = async () => {
 
 const PostsComponents = () => {
      // useQuery hook handles loading, error, and data states automatically
-  const { data, error, isLoading, isError, refetch } = useQuery('posts', fetchPosts, {
+  const { data, error, isLoading, isError, refetch } = useQuery(
+    'posts', 
+    fetchPosts, {
     // Optional: caching configurations
     cacheTime: 10 * 60 * 1000, // Cache for 10 minutes
     staleTime: 5 * 60 * 1000,  // Data stays "fresh" for 5 minutes
+    refetchOnWindowFocus: true, // Refetch when user clicks back into the window
+    keepPreviousData: true,      // Keep showing old data while fetching new data
   });
 
   // Handle loading state
   if (isLoading) return <div>Loading posts...</div>;
 
   // Handle error state
-  if (error) return <div>Error loading data</div>;
+  if (error) return <div>Error: {error.message}</div>;
   // Render the list of posts
   return(
     <div>
       <h2>Posts</h2>
       {/* Implement Refetch Feature */}
-      <button onClick={() => refetch()} style={{ marginBottom: '20px' }}>
+      <button onClick={() => refetch()} style={{ marginBottom: '20px', padding: '10px' }}>
         Refetch Posts
       </button>
 
